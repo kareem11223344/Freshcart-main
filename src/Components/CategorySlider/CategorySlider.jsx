@@ -83,7 +83,7 @@ export default function CategorySlider() {
               <div key={category._id} className="text-center pb-7 ">
                 <Link to={`/categoryProducts/${category.name}`}>
                   {/* // Category image */}
-                  <div className="bg-emerald-300 flex items-center justify-center mx-2 rounded-full shadow-xl  mt-1">
+                  <div className="mx-2">
                     <img
                       src={category.image}
                       className="w-4/5 h-52 object-cover rounded-3xl"

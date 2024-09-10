@@ -66,7 +66,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-slate-100 z-40 dark:bg-[#121212] dark:text-white border dark:border-black border-gray-100 top-0 right-0 left-0 fixed w-full">
+      <nav className=" font-semibold bg-slate-100 z-40 dark:bg-[#121212] dark:text-white border dark:border-black border-gray-100 top-0 right-0 left-0 fixed w-full">
         <div className="flex md:flex-row flex-col flex-wrap justify-between md:items-center items-start mx-auto max-w-screen-xl p-4">
           <div className="md:w-0 md:mx-0 flex items-center justify-between mx-4 w-full">
             <Link
@@ -168,10 +168,10 @@ export default function Navbar() {
               ) : null}
 
               <div className="icons flex gap-4">
-                <i className="fab fa-facebook text-lg pt-1"></i>
-                <i className="fab fa-youtube text-lg pt-1"></i>
-                <i className="fab fa-tiktok text-lg pt-1"></i>
-                <i className="fa-brands fa-instagram text-lg pt-1"></i>
+                <Link to={'https://www.facebook.com/karemahmed111'}><i className="fab fa-facebook text-lg pt-1"></i></Link>
+                <Link to={'https://x.com/KaremAh87644759'}><i className="fab fa-x-twitter text-lg pt-1"></i></Link>
+                <Link to={'https://www.instagram.com/karem_ahmed001/'}><i className="fa-brands fa-instagram text-lg pt-1"></i></Link>
+                <Link to={'https://www.linkedin.com/in/kareem-ahmed-21514b228/'}><i className="fab fa-linkedin text-lg pt-1"></i></Link>
               </div>
 
               <div className="links flex gap-4">
