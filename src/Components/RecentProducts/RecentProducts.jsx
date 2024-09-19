@@ -138,11 +138,10 @@ export default function RecentProducts() {
                   {/* Button to toggle wish list status */}
                   <button onClick={() => toggleWishList(product.id)}>
                     <i
-                      className={`${
-                        wishListStatus[product.id]
-                          ? "fa-solid fa-heart"
-                          : "fa-regular fa-heart"
-                      } absolute top-6 right-6 text-emerald-800 bg-emerald-100 rounded-2xl py-2 px-2 shadow-xl transition-transform duration-300 hover:font-bold text-lg`}
+                      className={`${wishListStatus[product.id]
+                        ? "fa-solid fa-heart"
+                        : "fa-regular fa-heart"
+                        } absolute top-6 right-6 text-emerald-800 bg-emerald-100 rounded-2xl py-2 px-2 shadow-xl transition-transform duration-300 hover:font-bold text-lg`}
                     ></i>
                   </button>
                 </div>
@@ -151,7 +150,7 @@ export default function RecentProducts() {
                   {/* Button to add product to cart */}
                   <button
                     onClick={() => handleAddToCart(product.id)}
-                    className="bg-emerald-500 hover:bg-emerald-400 py-2 w-4/5 mb-2 rounded-lg text-white"
+                    className="bg-gray-700 hover:bg-gray-600 py-2 w-4/5 mb-2 rounded-lg text-white"
                     disabled={loading === product.id}
                   >
                     {/* Display a loading spinner while adding to cart */}
@@ -185,7 +184,9 @@ export default function RecentProducts() {
             </div>
           ))
         ) : (
-          <LoadingSpinner />
+          <div className="text-center flex justify-center items-center mx-auto py-16">
+            <LoadingSpinner />
+          </div>
         )}
       </div>
     </div>

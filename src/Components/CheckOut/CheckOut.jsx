@@ -33,7 +33,7 @@ export default function CheckOut() {
   return (
     <>
       <div className="text-white py-12 pb-16">
-        <h2 className="text-center py-3 text-3xl font-semibold text-emerald-500 dark:text-white mb-2">
+        <h2 className="text-center py-3 text-3xl font-semibold text-gray-500 dark:text-white mb-2">
           CheckOut Now
         </h2>
 

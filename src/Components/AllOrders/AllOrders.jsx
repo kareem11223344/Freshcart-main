@@ -52,7 +52,9 @@ export default function AllOrders() {
   return (
     <>
       {Loading ? (
-        <LoadingSpinner />
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div>
           {!orders || orders.length == 0 ? ( // If the cart has no items, display the EmptyCart div
@@ -122,9 +124,8 @@ export default function AllOrders() {
 
                     {/* Order details, initially hidden */}
                     <div
-                      className={`order-details ${
-                        expandedOrderId === order._id ? "expanded" : "collapsed"
-                      }`}
+                      className={`order-details ${expandedOrderId === order._id ? "expanded" : "collapsed"
+                        }`}
                     >
                       {/* Main container for order items and summary */}
                       <div>

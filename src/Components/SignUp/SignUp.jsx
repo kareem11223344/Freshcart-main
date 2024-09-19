@@ -84,14 +84,14 @@ export default function SignUp() {
     onSubmit: handleRegister, // `handleRegister` function will be called on form submission
   });
 
-      // hook  to make the pages when reload or refresh to back to top of page
-      useScrollToTop();
+  // hook  to make the pages when reload or refresh to back to top of page
+  useScrollToTop();
 
   // The JSX returned by this function is the UI rendered to the user.
   return (
     <>
       <div className=" text-white pt-5 w-11/12 mx-auto md:pt-0">
-        <h2 className="text-center py-3 text-3xl font-semibold text-emerald-500 dark:text-white mb-2">
+        <h2 className="text-center py-3 text-3xl font-semibold text-gray-900 dark:text-white mb-2">
           Register
         </h2>
 
@@ -273,7 +273,7 @@ export default function SignUp() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="relative inline-flex items-center justify-center w-full px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-emerald-500 group focus:ring-4 focus:ring-emerald-300 dark:focus:ring-emerald-500 hover:bg-emerald-400"
+                className="relative inline-flex items-center justify-center w-full px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-gray-700 group focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-300 hover:bg-gray-500"
                 disabled={IsLoading} // Disable the button if the form is loading
               >
                 {IsLoading ? (

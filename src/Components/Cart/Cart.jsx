@@ -22,7 +22,9 @@ export default function Cart() {
     <>
       {isLoading ? (
         // Show loading spinner if data is being fetched
-        <LoadingSpinner />
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div>
           {Cart && Cart.data.products.length ? (
@@ -113,7 +115,7 @@ export default function Cart() {
                 </div>
 
                 {/* Cart summary and checkout section */}
-                <div className="md:w-1/5 md:mt-0 mt-14 w-9/12 mx-auto h-fit border dark:bg-emerald-500 border-emerald-200 shadow-lg shadow-emerald-500 rounded-md">
+                <div className="md:w-1/5 md:mt-0 mt-14 w-9/12 mx-auto h-fit border dark:bg-neutral-800 border-emerald-200 shadow-lg shadow-emerald-500 rounded-md">
                   {/* Display the cart summary title */}
                   <p className="pt-2 pb-3 rounded-sm border-b-2 border-emerald-200 px-2 font-semibold text-lg text-emerald-500 dark:text-white">
                     Cart Summary
@@ -126,7 +128,7 @@ export default function Cart() {
                   <Link to={"/checkout"}>
                     <button
                       type="button"
-                      className="text-white w-4/5 mx-auto bg-emerald-500 dark:bg-emerald-950 hover:bg-emerald-600 font-medium rounded-lg text-sm px-5 py-2.5 my-2 text-center flex items-center justify-center"
+                      className="text-white w-4/5 mx-auto bg-neutral-700 hover:bg-neutral-600 font-medium rounded-lg text-sm px-5 py-2.5 my-2 text-center flex items-center justify-center"
                     >
                       CheckOut Now
                       <i className="fa-solid fa-cart-plus text-white text-base px-2"></i>

@@ -53,7 +53,6 @@ export default function Categories() {
                   >
                     <Link to={`/categoryProducts/${category.name}`}>
                       {/* Category image */}
-                      <div className="bg-emerald-300 flex items-center justify-center mx-8 rounded-full hover:shadow-xl shadow-xl  mt-1">
                       <img
                         src={category.image}
                         className="w-full h-[300px] object-contain"

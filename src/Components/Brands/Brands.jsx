@@ -8,8 +8,8 @@ export default function Brands() {
   // State to store the list of categories fetched from the API
   const [Brands, setBrands] = useState([]);
 
-    // hook  to make the pages when reload or refresh to back to top of page
-    useScrollToTop();
+  // hook  to make the pages when reload or refresh to back to top of page
+  useScrollToTop();
 
   // Function to fetch categories from the API
   function getBrands() {
@@ -61,7 +61,9 @@ export default function Brands() {
           </div>
         </div>
       ) : (
-        <LoadingSpinner /> // Show loading spinner if Brands haven't loaded yet
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div> // Show loading spinner if Brands haven't loaded yet
       )}
     </>
   );

@@ -58,7 +58,7 @@ export default function CategorySlider() {
       .then((res) => {
         setCategories(res.data.data); // Update state with fetched categories
       })
-      .catch((res) => {}); // Handle error silently (no action taken here)
+      .catch((res) => { }); // Handle error silently (no action taken here)
   }
 
   // useEffect hook to fetch categories when the component mounts
@@ -100,7 +100,9 @@ export default function CategorySlider() {
           </Slider>
         </div>
       ) : (
-        <LoadingSpinner /> // Show loading spinner if categories haven't loaded yet
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div> // Show loading spinner if categories haven't loaded yet
       )}
     </>
   );
