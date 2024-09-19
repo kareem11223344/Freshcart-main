@@ -41,7 +41,9 @@ export default function WishList() {
     <div>
       {loading ? (
         // Show loading spinner while the wishlist data is being fetched
-        <LoadingSpinner />
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div>
           {/* Check if the wishlist is empty */}
@@ -68,19 +70,19 @@ export default function WishList() {
             <div>
               {/* Display wishlist items if available */}
               <div className="text-center py-3">
-                <i className="fa-regular fa-heart md:text-6xl text-5xl  text-emerald-500 pb-2 pt-4"></i>
+                <i className="fa-regular fa-heart md:text-6xl text-5xl  text-gray-500 pb-2 pt-4"></i>
                 <h2 className="md:text-6xl text-5xl font-semibold pb-3 dark:text-white">
                   My WishList
                 </h2>
                 {/* table that showes proudcts in the wishlist */}
                 <div className="container">
                   <div className="py-6 ">
-                    <div className=" w-5/6 md:w-11/12 mx-auto  shadow-lg border border-emerald-200 dark:border-[#282828] shadow-emerald-300 ">
+                    <div className=" w-5/6 md:w-11/12 mx-auto  shadow-lg border border-gray-200 dark:border-[#282828] shadow-emerald-300 ">
                       <div>
                         {wishListItems.data.map((product) => (
                           <div
                             key={product._id}
-                            className="bg-white  flex flex-col md:flex-row items-center justify-center md:justify-evenly border-b pb-8 md:pb-2 hover:bg-gray-100 dark:bg-[#282828] border-emerald-400 dark:hover:bg-[#121212]"
+                            className="bg-white  flex flex-col md:flex-row items-center justify-center md:justify-evenly border-b pb-8 md:pb-2 hover:bg-gray-100 dark:bg-[#282828] border-gray-400 dark:hover:bg-[#121212]"
                           >
                             {/* remove product from wishlist button */}
                             <div>
@@ -118,7 +120,7 @@ export default function WishList() {
                             <div>
                               <button
                                 onClick={() => handleAddToCart(product.id)}
-                                className="bg-emerald-500 hover:bg-emerald-400 py-2 px-3 w-full md:mb-2 mb-9 rounded-lg text-white"
+                                className="bg-gray-700 hover:bg-gray-600 py-2 px-3 w-full md:mb-2 mb-9 rounded-lg text-white"
                                 disabled={loadingCart === product.id}
                               >
                                 {loadingCart === product.id ? (

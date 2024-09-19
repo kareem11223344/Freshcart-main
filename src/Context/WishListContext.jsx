@@ -11,7 +11,7 @@ export default function WishListContextProvider({ children }) {
   const [wishListItems, setWishListItems] = useState([]);
   // State to manage the loading status when fetching or modifying the wishlist
   const [loading, setLoading] = useState(true);
-
+  
   // Base URL for the API
   let baseUrl = `https://ecommerce.routemisr.com`;
 

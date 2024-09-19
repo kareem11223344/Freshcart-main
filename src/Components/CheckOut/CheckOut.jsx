@@ -125,7 +125,7 @@ export default function CheckOut() {
             <div className="text-center">
               <button
                 type="submit"
-                className="relative inline-flex items-center justify-center w-full px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-emerald-500 group focus:ring-4 focus:ring-emerald-300 dark:focus:ring-emerald-500 hover:bg-emerald-400"
+                className="relative inline-flex items-center justify-center w-full px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-gray-700 group focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-500 hover:bg-gray-600"
               >
                 CheckOut
               </button>

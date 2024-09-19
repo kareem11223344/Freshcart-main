@@ -93,7 +93,7 @@ export default function Navbar() {
             } md:block`}
           >
             {UserLogin != null ? (
-              <ul className="flex flex-col md:flex-row gap-4 py-5 md:py-0 md:gap-6 ">
+              <ul className="flex flex-col md:flex-row gap-4 py-5 md:py-0 md:gap-6 dark:text-gray-400 ">
                 <li>
                   <NavLink
                     to=""
@@ -148,8 +148,8 @@ export default function Navbar() {
                 <div className="flex gap-5">
                   <NavLink to={"cart"}>
                     <div className="relative">
-                      <i className="fa-solid fa-cart-shopping text-emerald-500 font-semibold relative text-[24px] pt-2">
-                        <span className="absolute bottom-3 left-4 rounded-full text-white bg-emerald-600 shadow-lg text-sm px-1">
+                      <i className="fa-solid fa-cart-shopping text-gray-500 hover:text-gray-600 transition-all font-semibold relative text-[24px] pt-2">
+                        <span className="absolute bottom-3 left-4 rounded-full text-white bg-gray-400 shadow-lg text-sm px-1">
                           {Cart ? Cart.numOfCartItems : 0}
                         </span>
                       </i>
@@ -157,8 +157,8 @@ export default function Navbar() {
                   </NavLink>
                   <NavLink to={"wishlist"}>
                     <div className="relative">
-                      <i className="fa-solid fa-heart text-emerald-500 font-semibold relative text-[24px] pt-2">
-                        <span className="absolute bottom-3 left-4 rounded-full text-white bg-emerald-600 shadow-lg text-sm px-1">
+                      <i className="fa-solid fa-heart text-gray-500 hover:text-gray-600 transition-all font-semibold relative text-[24px] pt-2">
+                        <span className="absolute bottom-3 left-4 rounded-full text-white bg-gray-400 shadow-lg text-sm px-1">
                           {wishListItems ? wishListItems.count : 0}
                         </span>
                       </i>
@@ -168,10 +168,20 @@ export default function Navbar() {
               ) : null}
 
               <div className="icons flex gap-4">
-                <Link to={'https://www.facebook.com/karemahmed111'}><i className="fab fa-facebook text-lg pt-1"></i></Link>
-                <Link to={'https://x.com/KaremAh87644759'}><i className="fab fa-x-twitter text-lg pt-1"></i></Link>
-                <Link to={'https://www.instagram.com/karem_ahmed001/'}><i className="fa-brands fa-instagram text-lg pt-1"></i></Link>
-                <Link to={'https://www.linkedin.com/in/kareem-ahmed-21514b228/'}><i className="fab fa-linkedin text-lg pt-1"></i></Link>
+                <Link to={"https://www.facebook.com/karemahmed111"}>
+                  <i className="fab fa-facebook text-lg pt-1 hover:text-gray-500"></i>
+                </Link>
+                <Link to={"https://x.com/KaremAh87644759"}>
+                  <i className="fab fa-x-twitter text-lg pt-1 hover:text-gray-500"></i>
+                </Link>
+                <Link to={"https://www.instagram.com/karem_ahmed001/"}>
+                  <i className="fa-brands fa-instagram text-lg pt-1 hover:text-gray-500"></i>
+                </Link>
+                <Link
+                  to={"https://www.linkedin.com/in/kareem-ahmed-21514b228/"}
+                >
+                  <i className="fab fa-linkedin text-lg pt-1 hover:text-gray-500"></i>
+                </Link>
               </div>
 
               <div className="links flex gap-4">
@@ -180,7 +190,7 @@ export default function Navbar() {
                     onClick={() => signOut()}
                     className="text-base cursor-pointer font-semibold hover:text-gray-600 dark:hover:text-gray-300"
                   >
-                    SignOut
+                    Log Out
                   </span>
                 ) : (
                   <>

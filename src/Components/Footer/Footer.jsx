@@ -35,7 +35,7 @@ export default function Footer() {
             />
             <button
               type="button"
-              className="focus:outline-none text-white bg-emerald-500 hover:bg-emerald-400 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm h-10  md:w-1/5 md:px-0  md:h-9   px-1 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:focus:ring-green-800"
+              className="focus:outline-none text-white bg-gray-700 hover:bg-gray-600 focus:ring-4 focus:ring-gray-400 font-medium rounded-lg text-sm h-10  md:w-1/5 md:px-0  md:h-9   px-1 dark:bg-gray-500 dark:hover:bg-gray-400 dark:focus:ring-gray-300"
             >
               Share Link
             </button>

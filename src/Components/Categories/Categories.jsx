@@ -20,6 +20,7 @@ export default function Categories() {
       })
       .catch((error) => {
         console.error("Error fetching categories:", error); // Handle error and log to console
+        x
       });
   }
 
@@ -34,11 +35,11 @@ export default function Categories() {
       {Categories.length > 0 ? (
         <div className=" container mx-auto ">
           {/* Section title */}
-            <h2 className="text-2xl uppercase font-extrabold pt-3 shadow-emerald-500 text-center py-4 my-5 w-5/6 md:w-1/3 mx-auto rounded-xl shadow-md dark:shadow-emerald-500 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-500 ">
-              Shop Popular Categories
-            </h2>
+          <h2 className="text-2xl uppercase font-extrabold pt-3 shadow-emerald-500 text-center py-4 my-5 w-5/6 md:w-1/3 mx-auto rounded-xl shadow-md dark:shadow-emerald-500 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-500 ">
+            Shop Popular Categories
+          </h2>
 
-          <div className="row  ">
+          <div className="py-10 flex flex-wrap justify-center gap-y-10 w-[90%] mx-auto">
             {/* Map over the list of categories to create individual category items */}
             {Categories.map((category) => (
               <div
@@ -53,16 +54,11 @@ export default function Categories() {
                     <Link to={`/categoryProducts/${category.name}`}>
                       {/* Category image */}
                       <div className="bg-emerald-300 flex items-center justify-center mx-8 rounded-full hover:shadow-xl shadow-xl  mt-1">
-                        <img
-                          src={category.image}
-                          className="w-3/5 h-80  object-cover rounded-3xl"
-                          alt={category.name} // Alt text for accessibility
-                        />
-                      </div>
-                      {/* Category name */}
-                      <p className="font-semibold text-lg text-emerald-900 dark:text-white">
-                        {category.name}
-                      </p>
+                      <img
+                        src={category.image}
+                        className="w-full h-[300px] object-contain"
+                        alt={category.name}
+                      />
                     </Link>
                   </div>
                 </div>
@@ -71,7 +67,9 @@ export default function Categories() {
           </div>
         </div>
       ) : (
-        <LoadingSpinner /> // Show loading spinner if categories haven't loaded yet
+        <div className="text-center flex justify-center items-center mx-auto py-16">
+          <LoadingSpinner />
+        </div> // Show loading spinner if categories haven't loaded yet
       )}
     </>
   );

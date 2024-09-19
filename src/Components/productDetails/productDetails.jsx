@@ -187,7 +187,7 @@ export default function ProductDetails() {
               <div className="text-center font-semibold">
                 <button
                   onClick={() => handleAddToCart(Product.id)}
-                  className="bg-emerald-500 hover:bg-emerald-400 py-2 w-full mb-2 rounded-lg text-white"
+                  className="bg-gray-700 hover:bg-gray-600 py-2 w-full mb-2 rounded-lg text-white"
                   disabled={loadingProductId === Product.id} // Disable button if loading
                 >
                   {loadingProductId === Product.id ? (
@@ -266,7 +266,7 @@ export default function ProductDetails() {
                     <div className="text-center font-semibold absolute bottom-0 left-0 right-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                       <button
                         onClick={() => handleAddToCart(product.id)}
-                        className="bg-emerald-500 hover:bg-emerald-400 py-2 w-4/5 mb-2 rounded-lg text-white"
+                        className="bg-gray-700 hover:bg-gray-600 py-2 w-4/5 mb-2 rounded-lg text-white"
                         disabled={loadingProductId === product.id} // Disable button if loading
                       >
                         {loadingProductId === product.id ? (

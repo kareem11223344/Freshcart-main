@@ -31,7 +31,7 @@ export default function Cart() {
                 <h2 className="md:text-6xl text-5xl font-semibold pb-3 dark:text-white">
                   My Cart
                 </h2>
-                <i className="fa-solid fa-shopping-cart md:text-6xl text-5xl text-emerald-500 pb-2 pt-4"></i>
+                <i className="fa-solid fa-shopping-cart md:text-6xl text-5xl text-gray-500 pb-2 pt-4"></i>
               </div>
               <div className="flex md:flex-row flex-col py-5">
                 <div className="mx-auto w-3/4 text-sm text-gray-500 dark:text-gray-400 shadow-xl shadow-emerald-300">
